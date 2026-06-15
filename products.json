@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "iPhone 15 Pro Max 256GB",
+      "image": "https://placehold.co/400x400/1a1a2e/d4af37?text=iPhone+15+Pro+Max",
+      "price": 850000,
+      "discount": 5,
+      "availability": "متوفر",
+      "category": "آيفون",
+      "description": "تيتانيوم طبيعي، كاميرا 48 ميجابكسل، شريحة A17 Pro"
+    },
+    {
+      "id": "p2",
+      "name": "iPhone 14 Pro 128GB",
+      "image": "https://placehold.co/400x400/1a1a2e/d4af37?text=iPhone+14+Pro",
+      "price": 600000,
+      "discount": 10,
+      "availability": "متوفر",
+      "category": "آيفون",
+      "description": "جزيرة ديناميكية، كاميرا Pro 48MP"
+    },
+    {
+      "id": "p3",
+      "name": "Samsung Galaxy S24 Ultra",
+      "image": "https://placehold.co/400x400/1a1a2e/7c3aed?text=S24+Ultra",
+      "price": 780000,
+      "discount": 8,
+      "availability": "متوفر",
+      "category": "سامسونج",
+      "description": "قلم S Pen مدمج، كاميرا 200MP، شاشة Dynamic AMOLED"
+    },
+    {
+      "id": "p4",
+      "name": "Samsung Galaxy S24+",
+      "image": "https://placehold.co/400x400/1a1a2e/7c3aed?text=S24+Plus",
+      "price": 550000,
+      "discount": 0,
+      "availability": "متوفر",
+      "category": "سامسونج",
+      "description": "شاشة 6.7 بوصة، Snapdragon 8 Gen 3"
+    },
+    {
+      "id": "p5",
+      "name": "Xiaomi 14 Ultra",
+      "image": "https://placehold.co/400x400/1a1a2e/f0d060?text=Xiaomi+14+Ultra",
+      "price": 680000,
+      "discount": 12,
+      "availability": "متوفر",
+      "category": "شاومي",
+      "description": "كاميرا Leica، Snapdragon 8 Gen 3، شحن 90W"
+    },
+    {
+      "id": "p6",
+      "name": "Xiaomi Redmi Note 13 Pro",
+      "image": "https://placehold.co/400x400/1a1a2e/f0d060?text=Redmi+Note+13+Pro",
+      "price": 220000,
+      "discount": 15,
+      "availability": "متوفر",
+      "category": "شاومي",
+      "description": "كاميرا 200MP، AMOLED 120Hz، بطارية 5100mAh"
+    },
+    {
+      "id": "p7",
+      "name": "Huawei Pura 70 Pro",
+      "image": "https://placehold.co/400x400/1a1a2e/CF0A2C?text=Pura+70+Pro",
+      "price": 720000,
+      "discount": 0,
+      "availability": "نفذت الكمية",
+      "category": "هواوي",
+      "description": "كاميرا Leica، Kirin 9010، شاشة LTPO"
+    },
+    {
+      "id": "p8",
+      "name": "سماعة AirPods Pro 2",
+      "image": "https://placehold.co/400x400/1a1a2e/d4af37?text=AirPods+Pro+2",
+      "price": 120000,
+      "discount": 5,
+      "availability": "متوفر",
+      "category": "إكسسوارات",
+      "description": "إلغاء ضوضاء نشط، صوت مكاني، مقاومة للماء"
+    },
+    {
+      "id": "p9",
+      "name": "Samsung Galaxy Tab S9 Ultra",
+      "image": "https://placehold.co/400x400/1a1a2e/1428A0?text=Tab+S9+Ultra",
+      "price": 650000,
+      "discount": 7,
+      "availability": "متوفر",
+      "category": "أجهزة لوحية",
+      "description": "شاشة 14.6 بوصة AMOLED، قلم S Pen، Snapdragon 8 Gen 2"
+    }
+  ]
+}

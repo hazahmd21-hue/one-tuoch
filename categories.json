@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": "iphone",
+      "name": "آيفون",
+      "icon": "🍎",
+      "description": "أحدث هواتف Apple",
+      "color": "#a0a0a0"
+    },
+    {
+      "id": "samsung",
+      "name": "سامسونج",
+      "icon": "📱",
+      "description": "هواتف Samsung الذكية",
+      "color": "#1428A0"
+    },
+    {
+      "id": "xiaomi",
+      "name": "شاومي",
+      "icon": "⚡",
+      "description": "هواتف Xiaomi القوية",
+      "color": "#FF6900"
+    },
+    {
+      "id": "huawei",
+      "name": "هواوي",
+      "icon": "🌸",
+      "description": "هواتف Huawei الفاخرة",
+      "color": "#CF0A2C"
+    },
+    {
+      "id": "accessories",
+      "name": "إكسسوارات",
+      "icon": "🎧",
+      "description": "كل ما يتعلق بالجوال",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "tablets",
+      "name": "أجهزة لوحية",
+      "icon": "💻",
+      "description": "تابلت وبادات",
+      "color": "#d4af37"
+    }
+  ]
+}

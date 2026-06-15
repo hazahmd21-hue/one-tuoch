@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة التحكم — ون تتش | ONE TOUCH</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tajawal', 'Cairo', sans-serif;
+      background: #0b0b13;
+      color: #f4f4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .loading {
+      text-align: center;
+      opacity: 0.7;
+    }
+    .loading h2 {
+      font-size: 1.3rem;
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+    .loading p { font-size: 0.9rem; color: #7878a0; }
+  </style>
+
+  <!--
+    ╔══════════════════════════════════════════════════════════╗
+    ║     Decap CMS — لوحة تحكم ون تتش | ONE TOUCH           ║
+    ║     https://decapcms.org                                 ║
+    ╚══════════════════════════════════════════════════════════╝
+    يجب تفعيل Netlify Identity أولاً من لوحة تحكم Netlify
+    ثم دعوة المدير عبر: Site > Identity > Invite Users
+  -->
+
+  <!-- Netlify Identity Widget — للمصادقة -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <div class="loading">
+    <h2>⚡ ون تتش | ONE TOUCH</h2>
+    <p>جارٍ تحميل لوحة التحكم...</p>
+  </div>
+
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>

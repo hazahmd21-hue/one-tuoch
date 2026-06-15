@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ون تتش | ONE TOUCH - متجر الجوالات والإلكترونيات الفاخرة في اليمن، صنعاء" />
+  <meta name="theme-color" content="#0b0b13" />
+  <title>ون تتش | ONE TOUCH — جوالات وإلكترونيات</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================ NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="ون تتش - الرئيسية">
+        <span class="logo-ar">ون تتش</span>
+        <span class="logo-pipe">|</span>
+        <span class="logo-en">ONE TOUCH</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home"       class="nav-link">الرئيسية</a>
+        <a href="#categories" class="nav-link">الفئات</a>
+        <a href="#products"   class="nav-link">المنتجات</a>
+        <a href="#contact"    class="nav-link">تواصل</a>
+        <a href="https://wa.me/967773233997" class="nav-link nav-cta" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> اطلب الآن
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="home">
+    <!-- Circuit / Grid SVG background -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Glowing orbs -->
+    <div class="orb orb-gold"   aria-hidden="true"></div>
+    <div class="orb orb-purple" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge">
+        <i class="fas fa-bolt"></i> عروض حصرية لفترة محدودة
+      </span>
+
+      <h1 class="hero-title">
+        <span class="title-line-ar">ون تتش</span>
+        <span class="title-pipe">|</span>
+        <span class="title-line-en">ONE TOUCH</span>
+      </h1>
+
+      <p class="hero-sub">جوالات وإلكترونيات <span class="accent-gold">فاخرة</span> · أسعار <span class="accent-purple">لا تُقاوم</span></p>
+      <p class="hero-desc">اكتشف أحدث الهواتف الذكية والإكسسوارات من أفضل الماركات العالمية — متوفرة الآن في صنعاء</p>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-gold">
+          <i class="fas fa-store"></i> تسوق الآن
+        </a>
+        <a href="https://wa.me/967773233997" class="btn btn-ghost-wa" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n">+500</span>
+          <span class="stat-l">منتج</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-n">+1000</span>
+          <span class="stat-l">عميل سعيد</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-n">5★</span>
+          <span class="stat-l">تقييم</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#categories" class="hero-scroll-cue" aria-label="للأسفل">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================ CATEGORIES -->
+  <section class="section categories-section" id="categories">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-eyebrow">تصفح حسب</span>
+        <h2 class="section-title">الفئات</h2>
+      </header>
+
+      <div class="categories-grid" id="categoriesGrid">
+        <div class="skeleton-row">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PRODUCTS -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-eyebrow">اختر من</span>
+        <h2 class="section-title">منتجاتنا</h2>
+      </header>
+
+      <!-- Filter bar -->
+      <div class="filter-bar" id="filterBar" role="tablist" aria-label="تصفية حسب الفئة">
+        <button class="filter-btn active" data-cat="all" role="tab" aria-selected="true">الكل</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Skeleton placeholders -->
+        <div class="skeleton-card prod-skeleton"></div>
+        <div class="skeleton-card prod-skeleton"></div>
+        <div class="skeleton-card prod-skeleton"></div>
+        <div class="skeleton-card prod-skeleton"></div>
+        <div class="skeleton-card prod-skeleton"></div>
+        <div class="skeleton-card prod-skeleton"></div>
+      </div>
+
+      <!-- Empty state -->
+      <div class="empty-state" id="emptyState" hidden>
+        <i class="fas fa-box-open"></i>
+        <p>لا توجد منتجات في هذه الفئة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CTA / CONTACT -->
+  <section class="section cta-section" id="contact">
+    <div class="container">
+      <div class="cta-glass">
+        <div class="cta-text">
+          <h2>استفسار أو طلب خاص؟</h2>
+          <p>فريقنا جاهز للمساعدة على مدار الساعة — تواصل معنا الآن</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/967773233997" class="btn btn-gold" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> واتساب
+          </a>
+          <a href="tel:+967771724275" class="btn btn-outline-gold">
+            <i class="fas fa-phone"></i> اتصال مباشر
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <span class="logo-ar">ون تتش</span>
+            <span class="logo-pipe">|</span>
+            <span class="logo-en">ONE TOUCH</span>
+          </div>
+          <p class="footer-tagline">متجرك الموثوق للجوالات والإلكترونيات الفاخرة في اليمن</p>
+          <div class="social-row">
+            <a href="https://www.facebook.com/share/18uRytyWdq/"
+               class="social-btn facebook"
+               target="_blank" rel="noopener"
+               aria-label="فيسبوك ون تتش">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/one1_touch_"
+               class="social-btn instagram"
+               target="_blank" rel="noopener"
+               aria-label="إنستغرام ون تتش">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/967773233997"
+               class="social-btn whatsapp"
+               target="_blank" rel="noopener"
+               aria-label="واتساب ون تتش">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">روابط سريعة</h3>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+            <li><a href="#categories"><i class="fas fa-chevron-left"></i> الفئات</a></li>
+            <li><a href="#products"><i class="fas fa-chevron-left"></i> المنتجات</a></li>
+            <li><a href="https://wa.me/967773233997" target="_blank" rel="noopener"><i class="fas fa-chevron-left"></i> اطلب الآن</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">تواصل معنا</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fas fa-phone contact-icon call-icon"></i>
+              <a href="tel:+967771724275">+967 771 724 275</a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp contact-icon wa-icon"></i>
+              <a href="https://wa.me/967773233997" target="_blank" rel="noopener">+967 773 233 997</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt contact-icon loc-icon"></i>
+              <span>اليمن، صنعاء، شارع الخمسين<br>بيت بوس — جوار مجمع العرب</span>
+            </li>
+          </ul>
+
+          <!-- Big contact buttons -->
+          <div class="footer-cta-btns">
+            <a href="tel:+967771724275" class="btn btn-call-sm">
+              <i class="fas fa-phone"></i> اتصال
+            </a>
+            <a href="https://wa.me/967773233997" class="btn btn-wa-sm" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> واتساب
+            </a>
+          </div>
+        </div>
+      </div><!-- /footer-grid -->
+
+      <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> ون تتش | ONE TOUCH — جميع الحقوق محفوظة</p>
+        <p class="footer-credit">صنع بـ <i class="fas fa-heart"></i> في اليمن</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ FLOATING BUTTONS -->
+  <a href="https://wa.me/967773233997"
+     class="fab-wa"
+     target="_blank" rel="noopener"
+     aria-label="تواصل عبر الواتساب">
+    <i class="fab fa-whatsapp"></i>
+    <span class="fab-tooltip">تواصل معنا</span>
+  </a>
+
+  <button class="back-top" id="backTop" aria-label="العودة للأعلى">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
