@@ -1,39 +1,15 @@
-# ============================================================
-# Decap CMS — إعدادات لوحة تحكم ون تتش | ONE TOUCH
-# ============================================================
-
-# ─── BACKEND ─────────────────────────────────────────────────
-# git-gateway يعمل مع Netlify Identity (مجاني 100%)
 backend:
-  name: git-gateway
-  branch: main         # غيّر إلى master إذا كان الـ branch الرئيسي مختلفاً
+  name: github
+  repo: hazahmd21-hue/one-tuoch
+  branch: main
 
-# ─── MEDIA ───────────────────────────────────────────────────
-media_folder:  "images/uploads"   # مجلد حفظ الصور على Git
-public_folder: "/images/uploads"  # المسار العام للصور في الـ HTML
-
-# ─── LOCALE ──────────────────────────────────────────────────
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 locale: 'ar'
 
-# ─── EDITOR ──────────────────────────────────────────────────
-editor:
-  preview: false   # تعطيل المعاينة الجانبية (لأن الموقع Static)
-
-# ─── SITE URL ────────────────────────────────────────────────
-# استبدل your-site.netlify.app بعنوان موقعك الفعلي
-# display_url: https://your-site.netlify.app
-
-# ============================================================
-# COLLECTIONS
-# ============================================================
 collections:
-
-  # ──────────────────────────────────────────────────────────
-  # 1) المنتجات — Products
-  # ──────────────────────────────────────────────────────────
   - name: "products_collection"
     label: "📦 المنتجات"
-    description: "إدارة جميع منتجات المتجر (إضافة، تعديل، حذف)"
     files:
       - name: "products"
         label: "قائمة المنتجات"
@@ -43,72 +19,18 @@ collections:
           - name: "products"
             label: "المنتجات"
             widget: "list"
-            label_singular: "منتج"
-            summary: "{{fields.name}} — {{fields.category}} — {{fields.price}} ريال"
             fields:
-              - label: "🆔 المعرّف (id)"
-                name: "id"
-                widget: "string"
-                hint: "معرف فريد بالإنجليزية بدون مسافات (مثال: p1، iphone15)"
-                pattern:
-                  - "^[a-z0-9_-]+$"
-                  - "أحرف إنجليزية صغيرة وأرقام فقط"
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "الاسم", name: "name", widget: "string"}
+              - {label: "الصورة", name: "image", widget: "image"}
+              - {label: "السعر", name: "price", widget: "number", value_type: "int"}
+              - {label: "الخصم", name: "discount", widget: "number", value_type: "int", default: 0}
+              - {label: "التوفر", name: "availability", widget: "select", options: ["متوفر", "نفذت الكمية"]}
+              - {label: "الفئة", name: "category", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "text", required: false}
 
-              - label: "📱 اسم المنتج"
-                name: "name"
-                widget: "string"
-                hint: "مثال: iPhone 15 Pro Max 256GB"
-
-              - label: "🖼️ صورة المنتج"
-                name: "image"
-                widget: "image"
-                allow_multiple: false
-                hint: "قم برفع صورة المنتج (يفضل مربعة 400×400)"
-
-              - label: "💰 السعر (ريال يمني)"
-                name: "price"
-                widget: "number"
-                value_type: "int"
-                min: 0
-                hint: "السعر الأصلي قبل الخصم"
-
-              - label: "🏷️ نسبة الخصم (%)"
-                name: "discount"
-                widget: "number"
-                value_type: "int"
-                min: 0
-                max: 100
-                default: 0
-                required: false
-                hint: "اتركه 0 إذا لا يوجد خصم"
-
-              - label: "✅ حالة التوفر"
-                name: "availability"
-                widget: "select"
-                options:
-                  - label: "✅ متوفر"
-                    value: "متوفر"
-                  - label: "❌ نفذت الكمية"
-                    value: "نفذت الكمية"
-                default: "متوفر"
-
-              - label: "🗂️ الفئة / القسم"
-                name: "category"
-                widget: "string"
-                hint: "يجب أن يطابق اسم الفئة في قسم الفئات (مثال: آيفون، سامسونج)"
-
-              - label: "📝 وصف مختصر"
-                name: "description"
-                widget: "text"
-                required: false
-                hint: "وصف قصير للمنتج (اختياري)"
-
-  # ──────────────────────────────────────────────────────────
-  # 2) الفئات — Categories
-  # ──────────────────────────────────────────────────────────
   - name: "categories_collection"
     label: "🗂️ الفئات"
-    description: "إدارة فئات المتجر (إضافة أو حذف قسم)"
     files:
       - name: "categories"
         label: "قائمة الفئات"
@@ -118,36 +40,8 @@ collections:
           - name: "categories"
             label: "الفئات"
             widget: "list"
-            label_singular: "فئة"
-            summary: "{{fields.icon}} {{fields.name}}"
             fields:
-              - label: "🆔 المعرّف (id)"
-                name: "id"
-                widget: "string"
-                hint: "معرف فريد بالإنجليزية (مثال: iphone، samsung)"
-                pattern:
-                  - "^[a-z0-9_-]+$"
-                  - "أحرف إنجليزية صغيرة وأرقام فقط"
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "الاسم", name: "name", widget: "string"}
+              - {label: "الأيقونة", name: "icon", widget: "string", required: false}
 
-              - label: "🏷️ اسم الفئة"
-                name: "name"
-                widget: "string"
-                hint: "مثال: آيفون، سامسونج (سيُستخدم في الفلتر)"
-
-              - label: "😀 الأيقونة (Emoji)"
-                name: "icon"
-                widget: "string"
-                hint: "ضع Emoji واحد (مثال: 🍎 📱 ⚡)"
-                required: false
-
-              - label: "📄 وصف الفئة"
-                name: "description"
-                widget: "string"
-                required: false
-                hint: "وصف قصير يظهر تحت اسم الفئة"
-
-              - label: "🎨 اللون التمييزي"
-                name: "color"
-                widget: "color"
-                required: false
-                hint: "لون اختياري لتمييز الفئة (غير مستخدم حالياً)"
