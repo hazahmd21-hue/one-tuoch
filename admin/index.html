@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <title>دخول الأدمن</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #111120; color: white; }
-        .box { text-align: center; padding: 20px; border: 1px solid #d4af37; border-radius: 10px; }
-        input { padding: 10px; border-radius: 5px; border: 1px solid #444; margin-bottom: 10px; display: block; width: 200px; }
-        button { padding: 10px 20px; background: #d4af37; border: none; border-radius: 5px; cursor: pointer; color: black; font-weight: bold; }
+        body { background: #1a1a2e; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; margin: 0; }
+        .login-box { text-align: center; padding: 30px; border: 2px solid #d4af37; border-radius: 15px; background: #161625; }
+        input { padding: 12px; border-radius: 5px; border: none; margin-bottom: 10px; width: 220px; text-align: center; font-size: 16px; }
+        button { padding: 10px 25px; background: #d4af37; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h3>كلمة مرور الأدمن</h3>
-        <input type="password" id="pass" placeholder="أدخل كلمة المرور">
-        <button onclick="checkPass()">دخول</button>
+    <div class="login-box" id="login">
+        <h3>أدخل كلمة مرور الأدمن</h3>
+        <input type="password" id="pass" placeholder="كلمة السر">
+        <br>
+        <button onclick="check()">دخول</button>
     </div>
 
     <script>
-        function checkPass() {
-            const pass = document.getElementById('pass').value;
-            if (pass === '1445566') {
-                // عند نجاح كلمة السر، يتم توجيهك لصفحة الـ Admin الحقيقية
-                window.location.href = 'secure-admin.html';
+        function check() {
+            if (document.getElementById('pass').value === '1445566') {
+                document.getElementById('login').style.display = 'none';
+                const script = document.createElement('script');
+                script.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
+                document.body.appendChild(script);
             } else {
                 alert('كلمة المرور خاطئة!');
             }
