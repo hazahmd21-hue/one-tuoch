@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>دخول الأدمن</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #111120; color: white; }
+        .box { text-align: center; padding: 20px; border: 1px solid #d4af37; border-radius: 10px; }
+        input { padding: 10px; border-radius: 5px; border: 1px solid #444; margin-bottom: 10px; display: block; width: 200px; }
+        button { padding: 10px 20px; background: #d4af37; border: none; border-radius: 5px; cursor: pointer; color: black; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>كلمة مرور الأدمن</h3>
+        <input type="password" id="pass" placeholder="أدخل كلمة المرور">
+        <button onclick="checkPass()">دخول</button>
+    </div>
+
+    <script>
+        function checkPass() {
+            const pass = document.getElementById('pass').value;
+            if (pass === '1445566') {
+                // عند نجاح كلمة السر، يتم توجيهك لصفحة الـ Admin الحقيقية
+                window.location.href = 'secure-admin.html';
+            } else {
+                alert('كلمة المرور خاطئة!');
+            }
+        }
+    </script>
+</body>
+</html>
